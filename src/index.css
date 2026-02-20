@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #f4a7b9;
+  --color-primary-light: #fce4ec;
+  --color-primary-dark: #d88a9a;
+  --color-accent: #f8bbd0;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-xl rounded-[2rem];
+}
+
+.btn-primary {
+  @apply bg-primary text-white font-semibold py-3 px-6 rounded-2xl shadow-md hover:bg-primary-dark transition-all active:scale-95 text-center;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary font-semibold py-3 px-6 rounded-2xl hover:bg-primary-light transition-all active:scale-95 text-center;
+}
+
+.input-field {
+  @apply w-full bg-primary-light/50 border-none rounded-2xl py-3 px-4 focus:ring-2 focus:ring-primary outline-none transition-all;
+}
+
+.radio-card {
+  @apply flex items-center p-4 bg-primary-light rounded-2xl cursor-pointer border-2 border-transparent transition-all;
+}
+
+.radio-card.selected {
+  @apply border-primary bg-primary/20;
+}
